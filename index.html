@@ -1,0 +1,1239 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family: "Poppins", sans-serif;
+      }
+
+      .swiper {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+      }
+
+      .swiper-slide img {
+        display: block;
+        /* width: 100%;
+        height: 100%; */
+        object-fit: cover;
+      }
+
+      .swiper-pagination-bullet-active {
+        background-color: #fff;
+      }
+
+      /* .swiper-button-prev:after,
+      .swiper-button-next:after {
+        background-color: cyan;
+        color: #333;
+        border-radius: 40%;
+        box-shadow: 3px 3px 10px 2px;
+      } */
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap"
+      rel="stylesheet" />
+  </head>
+
+  <body>
+    <main>
+      <header class="mt-4 bg-white">
+        <nav>
+          <!-- Upper Nav -->
+          <section class="upper hidden md:flex md:justify-around">
+            <div class="logo w-20 md:w-24 lg:w-48">
+              <img src="./images/ineuron-logo.png" alt="logo" />
+            </div>
+            <!-- Search box -->
+            <div class="search-box hidden md:block w-2/5 rounded-xl border-black">
+              <div class="bg-white search-box flex flex-1 rounded-xl">
+                <ion-icon name="search-outline" class="block text-2xl p-2 m-2 bg-white text-[#324984]"></ion-icon>
+                <input
+                  class="md:rounded-xl md:w-full text-[#324984] text-xl md:placeholder-[#324984] md:w-full focus:outline-none"
+                  type="text" placeholder="What do you want to learn?" />
+              </div>
+            </div>
+            <!-- user profile -->
+            <div class="user hidden md:flex justify-between">
+              <div class="courses">
+                <!-- My courses -->
+                <a href="#" class="hidden md:flex text-[#324984] mr-4 w-24">My Courses</a>
+              </div>
+              <a href="#" class="text-[#324984]">Saksham</a>
+              <img class="mb-7 mr-4 hidden md:block" src="/images/dropdown.svg" />
+              <img src="./images/profile-icon.png" class="hidden md:block rounded-full md:`xw-8 md:h-8 md:ml-4"
+                alt="" />
+            </div>
+          </section>
+          <section class="hidden bottom-header lg:flex lg:justify-evenly mt-4">
+            <button class="flex">
+              Courses
+              <img class="hidden md:block md:mb-4 md:mr-4" src="/images/dropdown.svg" />
+            </button>
+            <a href="#">
+              <p>One Neuron</p>
+            </a>
+            <a href="#">
+              <p>Neuro Lab</p>
+            </a>
+            <a href="#">
+              <p>Job Portal</p>
+            </a>
+            <a href="#">
+              <p>Internship Portal</p>
+            </a>
+            <a href="#">
+              <p>Become an Affiliate</p>
+            </a>
+            <a href="#">
+              <p>Hall of Fame</p>
+            </a>
+            <button class="flex">
+              Company<img class="md:mb-4 md:mr-4 hidden md:block" src="/images/dropdown.svg" />
+            </button>
+          </section>
+          <section class="mobile-menu  flex justify-between sticky md:hidden lg:hidden">
+            <!-- hamburger menu -->
+            <div class="mobile-hamburgerMenu">
+              <img class="" src="/images/hamburger.svg" alt="hamburger" />
+            </div>
+            <!-- mobile logo -->
+            <div class="w-20">
+              <img src="./images/ineuron-logo.png" alt="logo" />
+            </div>
+            <div class="md:hidden lg:hidden">
+              <ion-icon name="search-outline" class="block lg:hidden bg-white text-[#324984]"></ion-icon>
+            </div>
+          </section>
+        </nav>
+      </header>
+      <!-- Section 1 - Hero Section -->
+      <div class="hero-container mb-7">
+        <div class="swiper hero-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="/images/hero-img1.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="/images/hero-img2.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="/images/hero-img3.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <!-- <div class="hidden md:block swiper-button-next"></div> -->
+          <!-- <div class="hidden md:block swiper-button-prev"></div> -->
+          <div class="hidden md:block swiper-pagination"></div>
+        </div>
+      </div>
+      <!-- Section 2 - “Pure Hardwork, No Shortcuts!” -->
+      <section class="mb-7">
+        <h2 class="text-center text-4xl font-bold text-[#233c7b] underline">
+          “Pure Hardwork, No Shortcuts!”
+        </h2>
+        <hr class="w-8 mx-auto tw-border-2 text-[#f1c40f] mt-14" />
+      </section>
+      <section
+        class="stats flex flex-col md:flex-row flex-wrap items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/books-icon.svg" alt="books" />
+          <h2 class="text-[#233c7b] text-3xl xl:text-4xl font-semibold">
+            300+
+          </h2>
+          <p class="text-2xl xl:text-3xl font-semibold">Different Courses</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/student-icon.svg" alt="books" />
+          <h2 class="text-[#233c7b] text-3xl xl:text-4xl font-semibold">
+            4,00,000+
+          </h2>
+          <p class="text-2xl xl:text-3xl font-semibold">Students Enrolled</p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/credit-card-icon.svg" alt="books" />
+          <h2 class="text-[#233c7b] text-3xl xl:text-4xl font-semibold">
+            10,000+
+          </h2>
+          <p class="text-2xl xl:text-3xl font-semibold">
+            Successful Transition
+          </p>
+        </div>
+      </section>
+      <!-- Section 3 -- Achivers work -->
+      <section class="mb-7 pb-7 mt-20">
+        <h2 class="text-center mb-24 text-5xl font-bold text-[#233c7b]">
+          Our Achiever’s Work with
+        </h2>
+        <hr class="w-8 mx-auto tw-border-2 text-[#f1c40f] mt-14" />
+      </section>
+      <section class="Achivers-container">
+        <!-- Swiper -->
+        <div class="swiper Achivers-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/oracle.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/wipro.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/amazon.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/boeing.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/british-telecom.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/dukaan.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!-- section 4 -- Hall of fame -->
+      <section class="hallOfFame-container container mx-auto max-w-7xl py-20 text-inGrey-100">
+        <h2 class="text-center mb-24 text-5xl font-bold text-[#233c7b]">
+          Hall of Fame
+        </h2>
+        <div class="swiper hallOfFame-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="flex flex-row items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+                <div class="flex flex-col gap-2 items-center justify-around">
+                  <img class="pb-3 w-40 rounded-full" src="./images/shivendra-achiever.jpeg" alt="books" />
+                  <p class="text-[#000f35] text-xl font-semibold">
+                    Shivendra Pratap Shahi
+                  </p>
+                  <p class="text-sm text-[#646565] font-semibold">
+                    Accenture <br />
+                    Technology Education Analyst
+                  </p>
+                  <p class="text-sm text-[#494949] font-semibold">
+                    I wanted to express my heartfelt gratitude for your
+                    incredible support and guidance throughout my journey
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-row items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+                <div class="flex flex-col gap-2 items-center justify-around">
+                  <img class="pb-3 w-40 rounded-full" src="./images/vaasu bisht-achiever.jpeg" alt="books" />
+                  <p class="text-[#000f35] text-xl font-semibold">
+                    Vaasu Bisht
+                  </p>
+                  <p class="text-sm text-[#646565] font-semibold text-3.5">
+                    i3 Digital Health <br />
+                    Data Science Intern
+                  </p>
+                  <p class="text-sm text-[#494949] font-semibold">
+                    I want to express gratitude to iNeuron because in-depth
+                    lectures and guidance by iNeuron I was able to crack a Data
+                    Science Internship in
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-row items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+                <div class="flex flex-col gap-2 items-center justify-around">
+                  <img class="pb-3 w-40 rounded-full" src="./images/jayesh mahajan-achiever.jpeg" alt="books" />
+                  <p class="text-[#000f35] text-xl font-semibold">
+                    Jayesh Mahajan
+                  </p>
+                  <p class="text-sm text-[#646565] font-semibold">
+                    Atgeir Solutions <br />
+                    Associate Data Engineer
+                  </p>
+                  <p class="text-sm text-[#494949] font-semibold">
+                    I would like to express my heartfelt gratitude to Ineuron.ai
+                    for providing me with exceptional training that has paved
+                    the way for my successful
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-row items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+                <div class="flex flex-col gap-2 items-center justify-around">
+                  <img class="pb-3 w-40 rounded-full" src="./images/aryan-namdev-achiever.jpeg" alt="books" />
+                  <p class="text-[#000f35] text-xl font-semibold">
+                    Aryan Namdev
+                  </p>
+                  <p class="text-sm text-[#646565] font-semibold">
+                    Casefox <br />React Developer
+                  </p>
+                  <p class="text-sm text-[#494949] font-semibold">
+                    Being from a non-tech background, I always though it will be
+                    hard to get my foot into tech, I started my Web Development
+                    journey in March`22
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="flex flex-row items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+                <div class="flex flex-col gap-2 items-center justify-around">
+                  <img class="pb-3 w-40 rounded-full" src="./images/pritest-badgujar-achiever.jpeg" alt="books" />
+                  <p class="text-[#000f35] text-xl font-semibold">
+                    Pritesh Badgujar
+                  </p>
+                  <p class="text-sm text-[#646565] font-semibold">
+                    Safepack Industries Ltd. <br />
+                    Jr. Business Analyst
+                  </p>
+                  <p class="text-sm text-[#494949] font-semibold">
+                    Its been great learning experience with Ineuron, specially
+                    with Sudhanshu Sir for python, and Krish Sir for my favorite
+                    subject statistics.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="hidden md:block swiper-button-next"></div>
+          <div class="hidden md:block swiper-button-prev"></div>
+        </div>
+      </section>
+
+      <!-- Section 5 -- Live Program -->
+
+      <section>
+        <div class="container mx-auto max-w-7xl pb-10">
+          <!-- Title -->
+          <div class="heading-section flex flex-col items-center justify-center">
+            <p class="text-[#233c7b] text-5xl font-bold mb-4 lg:mb-8">
+              Live Program
+            </p>
+            <p class="text-sm lg:text-lg text-[#414e5d] mb-18">
+              Get your program with live "instructor led" learning.
+            </p>
+          </div>
+          <div class="swiper liveProgram-swiper mt-14">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/big-data-thumbnail.jpg" alt="Sudhanshu Kumar" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Job Guaranteed BigData Bootcamp 2.0
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Sudhanshu Kumar
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 17,700</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!--  2-->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/data-science-interview-thumbnail.jpg"
+                      alt="Krish Naik" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Data Science Interview
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Krish Naik
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 4,000</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/fs-da.png" alt="Krish Naik" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Full Stack Data Analyst
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Krish Naik
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 10,000</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- 4 -->
+
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/fs-ds.jpg" alt="Dr. Furqan Alam" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Full Stack Data Science Masters
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Dr. Furqan Alam
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 20,000</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- 5 -->
+
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/fs-java.png" alt="Navin Reddy" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Full Stack Java Developer
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Navin Reddy
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>17,700.00</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- 6 -->
+
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/fs-ml-thumbnail.png" alt="Krish Naik" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Machine Learning Bootcamp
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Krish Naik
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 6,000</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="hidden md:block swiper-button-next"></div>
+            <div class="hidden md:block swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 6 -- Affordable Programs -->
+
+      <section>
+        <div class="container mx-auto max-w-7xl pb-10">
+          <!-- Title -->
+          <div class="heading-section flex flex-col items-center justify-center">
+            <p class="text-[#233c7b] text-5xl font-bold mb-4 lg:mb-8">
+              Affordable Programs
+            </p>
+            <p class="text-sm lg:text-lg text-[#414e5d] mb-18">
+              Find your favourite courses in pocket-friendly ways.
+            </p>
+          </div>
+          <div class="swiper liveProgram-swiper mt-14">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Affordable Programs/java.png" alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Java Bootcamp for Beginners
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hitesh Choudhary
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 499</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!--  2-->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Affordable Programs/c++.png" alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      C++ Bootcamp for Beginners
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hitesh Choudhary
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 499</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Affordable Programs/dart.png" alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Dart Language
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hitesh Choudhary
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 499</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- 4 -->
+
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Affordable Programs/html-css.png"
+                      alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      HTML and CSS for Web Development
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hitesh Choudhary
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span> 499</p>
+                      <p class="text-sm border px-2 py-0.5 rounded-sm bg-[#a2cafa] text-inBlue-900 border-[#8fb7fb]">
+                        Live
+                      </p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="hidden md:block swiper-button-next"></div>
+            <div class="hidden md:block swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 7 -- Community Programs -->
+      <section>
+        <div class="container mx-auto max-w-7xl pb-10">
+          <!-- Title -->
+          <div class="heading-section flex flex-col items-center justify-center">
+            <p class="text-[#233c7b] text-5xl font-bold mb-4 lg:mb-8">
+              Community Programs
+            </p>
+            <p class="text-sm lg:text-lg text-[#414e5d] mb-18">
+              Open to all pro-live classes on Youtube for free.
+            </p>
+          </div>
+          <div class="swiper liveProgram-swiper mt-14">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Community Programs/database-design.jpg"
+                      alt="Vishwa Mohan" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Mastering Databases
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Vishwa Mohan
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold">Free</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!--  2-->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Community Programs/machine-learning.jpg"
+                      alt="Krish Naik" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Machine Learning Community Class
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Krish Naik
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold">Free</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Community Programs/java.jpg" alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Java Community Class
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hyder Abbas
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold">Free</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!-- 4 -->
+
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/Community Programs/prizma-backendjpg.jpg"
+                      alt="Hitesh Choudhary" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Prisma Backend Development
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Hitesh Choudhary
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold">Free</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+            <div class="hidden md:block swiper-button-next"></div>
+            <div class="hidden md:block swiper-button-prev"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Section 8 -- One Neuron -->
+      <section>
+        <div class="container mx-auto max-w-7xl pb-10">
+          <!-- Title -->
+          <div class="heading-section flex flex-col items-center justify-center">
+            <p class="text-[#233c7b] text-5xl font-bold mb-4 lg:mb-8">
+              One Neuron
+            </p>
+            <p class="text-sm lg:text-lg text-[#414e5d] mb-18">
+              New Neurons all day, every day.
+            </p>
+          </div>
+          <div class="swiper liveProgram-swiper mt-14">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/one neuron/DS-projects.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Data science Projects Neuron
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Data science Projects Neuron consists of high-quality
+                      projects curated by our premium mentors. These courses
+                      with projects will really help you to build a strong
+                      practical foundation in the field of artificial
+                      intelligence.
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>15,000</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!--  2-->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/one neuron/big data.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Big Data Projects Neuron
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      Big Data Projects Neuron consists of high-quality projects
+                      curated by our premium mentors. These courses with
+                      projects will really help you to build a strong practical
+                      foundation in the field of data engineering.
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>15,000</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/one neuron/tech-neuron.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Tech Neuron
+                    </p>
+                    <p class="text-inBlack-500 text-base text-left">
+                      200+ courses, 500+ projects, raise your demand option,
+                      consistent services from iNeuron, work 1:1 with experts
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>25,000</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+      </section>
+
+      <!-- Section 9 -- Test Series -->
+      <section>
+        <div class="container mx-auto max-w-7xl pb-10">
+          <!-- Title -->
+          <div class="heading-section flex flex-col items-center justify-center">
+            <p class="text-[#233c7b] text-5xl font-bold mb-4 lg:mb-8">
+              Test Series
+            </p>
+            <p class="text-sm lg:text-lg text-[#414e5d] mb-18">
+              Quiz-based courses to prepare you for interviews.
+            </p>
+          </div>
+          <div class="swiper liveProgram-swiper mt-14">
+            <div class="swiper-wrapper">
+              <!-- 1 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/java-coding-interview.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Java Coding Interview Preparation
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>3,540</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+
+              <!--  2-->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/javascript-interview.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      JavaScript Coding Interview Preparation
+                    </p>
+
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>3,540</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 3 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/machine learning interview.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Machine Learning Interview Preparation
+                    </p>
+
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>3,540</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 4 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/pro-aptitude-c.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Pro Aptitude - C Language
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>3,540</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 5 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/pro-aptitude-dsa.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Pro Aptitude - Data Structures and Algorithms
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>3,540</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+              <!-- 6 -->
+              <div class="swiper-slide">
+                <section class="flex-auto relative w-96">
+                  <div class="card-wrapper flex flex-col item-start justify-between cursor-pointer">
+                    <img class="w-full" src="./images/thumbnails/test series/pro-aptitude-os.jpg" alt="" />
+                    <p class="text-3xl text-left font-semibold text-[#28417e] mt-4">
+                      Pro Aptitude - Operating Systems
+                    </p>
+                    <div class="flex justify-between mt-6">
+                      <p class="text-left font-bold"><span>₹</span>499</p>
+                    </div>
+                  </div>
+                </section>
+              </div>
+      </section>
+
+      <!-- Section 10 - Hackathon's We Conducted -->
+
+      <section>
+        <h2 class="text-[#233c7b] text-4xl lg:text-5xl text-center font-bold mb-4 lg:mb-8">
+          Hackathon's We Conducted
+        </h2>
+
+        <div class="hero-container mb-7">
+          <div class="swiper hero-swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <div class="img_wrapper">
+                  <img src="/images/github (1).png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img_wrapper">
+                  <img src="/images/jcerc.png" alt="" />
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <div class="img_wrapper">
+                  <img src="/images/jetbrains (1).png" alt="" />
+                </div>
+              </div>
+            </div>
+            <!-- <div class="hidden md:block swiper-button-next"></div> -->
+            <!-- <div class="hidden md:block swiper-button-prev"></div> -->
+            <div class="hidden md:block swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- section 11 - Hackathon companies -->
+
+      <section class="mb-12 mt-7 pb-7 mt-20">
+        <h2 class="text-center text-4xl lg:text-5xl font-bold text-[#233c7b]">
+          Hackathon Companies
+        </h2>
+      </section>
+      <section class="Achivers-container">
+        <!-- Swiper -->
+        <div class="swiper Achivers-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/geekyants.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/nvidia.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/github.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/redis.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/jetbrains.png" alt="" />
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="img_wrapper">
+                <img src="./images/companies/dukaan.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+      <!-- Section 12 -- Our Products -->
+
+      <section class="mb-7">
+        <h2 class="text-center text-4xl lg:text-5xl font-bold text-[#233c7b] mt-20">
+          Our Products
+        </h2>
+        <hr class="w-8 mx-auto tw-border-2 text-[#f1c40f] mt-14" />
+      </section>
+      <section
+        class="stats flex flex-col md:flex-row flex-wrap items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/neurolab-icon.svg" alt="books" />
+          <p class="text-xl xl:text-2xl font-semibold">Neuro Lab</p>
+          <p class="text-inBlack-500 text-base text-center w-80">
+            Supercharge your project development with our robust lab.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/jobPortal-icon.svg" alt="books" />
+          <p class="text-xl xl:text-2xl font-semibold">Job Portal</p>
+          <p class="text-inBlack-500 text-base text-center p-4 w-80">
+            Use exceptional templates for a stand-out resume minus the sign up process.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/Internship-icon.svg" alt="books" />
+          <p class="text-xl xl:text-2xl font-semibold">Internship Portal</p>
+          <p class="text-inBlack-500 text-base text-center p-4 w-80">
+            iNeuron's self-paced internship portal prioritises hands-on training with 570+ internship projects.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/affilitatePortal-icon.svg" alt="books" />
+          <p class="text-xl xl:text-2xl font-semibold">Become an affiliate</p>
+          <p class="text-inBlack-500 text-base text-center p-4 w-80">
+            Explore affiliate marketing opportunities with iNeuron and attain financial freedom.
+          </p>
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/halloffame-icon.svg" alt="books" />
+          <p class="text-xl xl:text-2xl font-semibold">Hall of fame</p>
+          <p class="text-inBlack-500 text-base text-center p-4 w-80">
+            Our student placements and 100K+ career transitions speak volumes about our courses.
+          </p>
+        </div>
+
+      </section>
+
+      <!-- Section 13 - Our Partnered Institution -->
+
+      <section>
+        <h2 class="text-center text-4xl lg:text-5xl font-bold text-[#233c7b] mb-12">
+          Our Partnered Institutions
+        </h2>
+      </section>
+
+      <section
+        class="stats flex flex-col md:flex-row flex-wrap items-center justify-around gap-10 lg:gap-20 xl:gap-24 2xl:gap-52 pb-7">
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/taxila.svg" alt="books" />
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/vit.svg" alt="books" />
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/keit.svg" alt="books" />
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/gim.svg" alt="books" />
+        </div>
+        <div class="flex flex-col gap-2 items-center justify-around">
+          <img class="pb-3 w-40" src="./images/malnad-college.svg" alt="books" />
+        </div>
+
+      </section>
+      
+      <!-- Section 14 -- Footer -->
+      <footer class="bg-[#233c7b] text-white container  p-4 w-screen md:w-screen">
+        
+        <section class="w-full grid grid-cols-1 gap-10 md:grid-cols-4">
+          <section>
+          <img src="./images/ineuron-logo-white.png" alt="ineuron-white-logo">
+          <div class="social-accounts">
+            <div class="social-wrapper w-4 flex gap-5 text-center m-2">
+              <img src="./images/social icons/facebook.png" alt="Facebook">
+              <img src="./images/social icons/twitter.png" alt="Twitter">
+              <img src="./images/social icons/linkedin.png" alt="linkedin">
+              <img src="./images/social icons/youtube.png" alt="youtube">
+              <img src="./images/social icons/instagram.png" alt="Instagram">
+              <img src="./images/social icons/discord.png" alt="Discord">
+            </div>
+          </div>
+          <hr class=" color-[orange] w-42 mb-2">
+          <div class="address flex flex-col justify-center">
+            <p><span><img class="w-3" src="./images/location-pin.png" alt="pin"></span> 17th Floor Tower A, Brigade
+              Signature Towers, Sannatammanahalli, Bengaluru, Karnataka 562129.</p>
+
+            <span class="font-bold">Email us: <img class="w-3" src="./images/email.png" alt="email"></span>
+            <a href="mailto:contact@ineuron.ai">contact@ineuron.ai</a>
+          </div>
+
+          <div class="iso">
+            <img src="./images/iso-9001-2015.svg" alt="">
+          </div>
+        </section>
+
+        <!-- Company section -->
+
+        <section class="company-section flex flex-col">
+          <h2 class="text-2xl font-semibold mb-12">Company</h2>
+          <hr class="mb-2">
+          <ul>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Comunity</a></li>
+            <li><a href="#">FAQs</a></li>
+            <li><a href="#">Job assistance</a></li>
+            <li><a href="#">Terms and conditions</a></li>
+          </ul>
+
+        </section>
+        <section class="company-section-2 flex flex-col">
+          <ul>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Hack-A-Thon</a></li>
+            <li><a href="#">Job guarantee</a></li>
+            <li><a href="#">Privacy policy</a></li>
+          </ul>
+        </section>
+        <!-- Products section -->
+
+        <section class="products-section flex flex-col">
+          <h2 class="text-2xl font-semibold mb-3">Products</h2>
+          <hr>
+          <ul>
+
+            <li><a href="#">Neuro Lab</a></li>
+            <li><a href="#">Job portal</a></li>
+            <li><a href="#">Internship portal</a></li>
+            <li><a href="#">Become an affiliate</a></li>
+            <li><a href="#">Hall of fame</a></li>
+          </ul>
+        </section>
+        </section>
+        
+      </footer>
+
+    </main>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+      let heroSwiper = new Swiper(".hero-swiper", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplay: {
+          delay: 3000,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          type: "bullets",
+        },
+        keyboard: true,
+      });
+    </script>
+    <!-- Initialize Swiper -->
+    <script>
+      var achiversSwiper = new Swiper(".Achivers-swiper", {
+        slidesPerView: 5,
+        spaceBetween: 30,
+        autoplay: {
+          delay: 1000,
+        },
+        // Default parameters
+        slidesPerView: 5,
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+    <!-- Hall of Fame swiper -->
+    <script>
+      var hallOfFameSwiper = new Swiper(".hallOfFame-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 1000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplayDisableOnInteraction: true,
+        // loop: true,
+        // Default parameters
+        slidesPerView: 3,
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+
+    <!-- Live Program slider -->
+    <script>
+      var liveProgramSwiper = new Swiper(".liveProgram-swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        autoplay: {
+          delay: 1000,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        autoplayDisableOnInteraction: true,
+        // loop: true,
+        // Default parameters
+        slidesPerView: 3,
+        spaceBetween: 10,
+        // Responsive breakpoints
+        breakpoints: {
+          // when window width is >= 320px
+          320: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+          },
+          // when window width is >= 480px
+          480: {
+            slidesPerView: 2,
+            spaceBetween: 30,
+          },
+          // when window width is >= 640px
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 40,
+          },
+          960: {
+            slidesPerView: 3,
+            spaceBetween: 40,
+          },
+        },
+      });
+    </script>
+    <!-- hackathon slider -->
+
+    <!-- ion icons script -->
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+  </body>
+
+</html>
